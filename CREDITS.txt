@@ -1,0 +1,28 @@
+Photo credits (Pexels License: free to use, credit not required)
+
+assets/hero_spring.jpg     "Vibrant Spring Tulips in Blooming Garden"
+                           https://www.pexels.com/photo/vibrant-spring-tulips-in-blooming-garden-30182630/
+assets/hero_summer.jpg     "House Backyard with Lawn Green Grass"
+                           https://www.pexels.com/photo/house-backyard-with-lawn-green-grass-7546775/
+assets/hero_fall.jpg       "Tranquil Garden with Colorful Foliage and Stone Path"
+                           https://www.pexels.com/photo/tranquil-garden-with-colorful-foliage-and-stone-path-32172798/
+assets/hero_winter.jpg     "Serene Winter Wonderland Pathway in a Snow-Covered Garden"
+                           https://www.pexels.com/photo/serene-winter-wonderland-pathway-in-a-snow-covered-garden-29759904/
+assets/feat_lawn.jpg       "Red and Black Push Lawn Mower on Green Grass"
+                           https://www.pexels.com/photo/red-and-black-push-lawn-mower-on-green-grass-4162016/
+assets/feat_patio.jpg      "Tranquil Stone Patio in New York Garden"
+                           https://www.pexels.com/photo/tranquil-stone-patio-in-new-york-garden-37785078/
+assets/feat_planting.jpg   "Gardener Planting Seedlings in Outdoor Garden"
+                           https://www.pexels.com/photo/gardener-planting-seedlings-in-outdoor-garden-30371404/
+assets/story_pond.jpg      "Backyard Landscaping with Stone Pond and Garden" (cropped)
+                           https://www.pexels.com/photo/backyard-landscaping-with-stone-pond-and-garden-36613784/
+assets/svc_hedge.jpg       "Gardener Trimming Hedges with Shears Outdoors"
+                           https://www.pexels.com/photo/gardener-trimming-hedges-with-shears-outdoors-38936334/
+assets/svc_sprinkler.jpg   "Garden Sprinkler Watering Lush Green Lawn"
+                           https://www.pexels.com/photo/garden-sprinkler-watering-lush-green-lawn-37720375/
+assets/svc_snow.jpg        "Snow-Covered Patio Furniture in a Winter Wonderland"
+                           https://www.pexels.com/photo/snow-covered-patio-furniture-in-a-winter-wonderland-35637247/
+
+Photographer names were not recorded when downloaded; see the pages above.
+Cropped and resized with WORKING/prep_images.py (original downloads are in INCOMING/, kept out of git).
+Icons (assets/favicon.png, assets/totop_sprout.svg) were drawn for this project.

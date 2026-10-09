@@ -1,0 +1,7 @@
+WORKING/
+INCOMING/
+__pycache__/
+*.pyc
+guides/
+.wrangler/
+.dev.vars

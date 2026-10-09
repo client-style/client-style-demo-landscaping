@@ -1,0 +1,44 @@
+name: Build and Deploy to Cloudflare Pages
+
+# Standard mAIntAIn Style site pipeline (template, 2026-09-27).
+# Every push to main -- a Client Style edit to build-scripts/brand_config.py,
+# or George's own commit -- rebuilds the whole site from brand_config.py and
+# publishes site/ to Cloudflare Pages. Nobody uploads built HTML by hand.
+#
+# FERNHOLLOW DEMO: account id and project name are written directly below (not sensitive); only the CLOUDFLARE_API_TOKEN secret is needed.
+# ONE-TIME SETUP for a new client repo (Settings -> Secrets and variables -> Actions):
+#   Secrets:   CLOUDFLARE_API_TOKEN   (token with "Cloudflare Pages: Edit", on the CLIENT's account)
+#              CLOUDFLARE_ACCOUNT_ID  (the client's Cloudflare account id)
+#   Variables: PAGES_PROJECT          (the Pages project name, same as PROJECT_SLUG in brand_config.py)
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install build dependencies (reportlab, for the guide PDFs)
+        run: pip install reportlab
+
+      - name: Build site
+        run: python build-scripts/build_all.py
+
+      - name: Copy static assets into site/
+        run: if [ -d assets ]; then mkdir -p site/assets && cp -r assets/. site/assets/; fi
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 4e36bf721700a25b66d1dda48497d5ad
+          command: pages deploy site --project-name=demo-landscaping --branch=main --commit-dirty=true
